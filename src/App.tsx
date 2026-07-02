@@ -1,5 +1,5 @@
 function App() {
-  return <h1>Desafio Furniro</h1>;
+  return <h1 className="font-poppins">Desafio Furniro</h1>;
 }
 
 export default App;
