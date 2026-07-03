@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import interior1 from "../assets/interior01.svg";
+import interior1 from "../../assets/interior01.svg";
 
 export function Discover() {
   return (
