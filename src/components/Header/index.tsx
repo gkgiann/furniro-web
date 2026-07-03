@@ -13,7 +13,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 flex justify-between items-center py-5 px-8">
+    <header className="sticky z-50 top-0 flex justify-between items-center py-5 px-8 bg-white">
       <a href="/">
         <img className="h-8 sm:h-10 md:h-12" src={logo} alt="Logo" />
       </a>
