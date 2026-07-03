@@ -3,6 +3,11 @@
 
 @theme {
   --font-poppins: "Poppins", sans-serif;
+
+  --color-yellow-primary-light: #FFF3E3;
+  --color-yellow-primary: #B88E2F;
+  --color-primary: #333333;
+  --color-secondary: #666666;
 }
 
 body {
