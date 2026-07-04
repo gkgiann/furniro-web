@@ -6,13 +6,13 @@ type CategoryProps = {
 
 export function Category({ src, alt, title }: CategoryProps) {
   return (
-    <div className="max-w-95.25 text-center hover:-translate-y-7 transition">
+    <div className="max-w-95.25 text-center transition hover:-translate-y-7">
       <img
-        className="h-100 object-cover rounded-lg sm:h-120"
+        className="h-100 rounded-lg object-cover sm:h-120"
         src={src}
         alt={alt}
       />
-      <h2 className="font-semibold mt-7.5 text-xl sm:text-2xl">{title}</h2>
+      <h2 className="mt-7.5 text-xl font-semibold sm:text-2xl">{title}</h2>
     </div>
   );
 }

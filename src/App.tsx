@@ -6,7 +6,7 @@ import { Products } from "./components/Products";
 
 function App() {
   return (
-    <div className="max-w-360 mx-auto">
+    <div className="mx-auto max-w-360">
       <Header />
       <Discover />
       <CategoryGrid />

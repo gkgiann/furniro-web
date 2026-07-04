@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useEffect, useState } from "react";
 import type { Product } from "../../types/product";
 import { Card } from "./Card";
@@ -14,16 +15,27 @@ export function Products() {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center gap-8 mt-14">
-      <h1 className="text-3xl sm:text-[40px] text-gray-1 leading-[120%] font-bold">
+    <section className="relative mt-14 flex flex-col items-center gap-8">
+      <h1 className="text-3xl leading-[120%] font-bold text-gray-1 sm:text-[40px]">
         Our Products
       </h1>
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div
+        className={clsx(
+          "grid grid-cols-1 gap-8",
+          "md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+        )}
+      >
         {products.map((p) => (
           <Card key={p.id} product={p} />
         ))}
       </div>
-      <button className="font-semibold text-yellow-primary border border-yellow-primary py-3 px-20 leading-[150%] transition cursor-pointer hover:bg-yellow-primary hover:text-white">
+      <button
+        className={clsx(
+          "cursor-pointer border border-yellow-primary px-20 py-3",
+          "leading-[150%] font-semibold text-yellow-primary transition",
+          "hover:bg-yellow-primary hover:text-white",
+        )}
+      >
         Show More
       </button>
     </section>

@@ -6,7 +6,7 @@ type HeaderIconLinkProps = {
 export function HeaderIconLink({ src, alt }: HeaderIconLinkProps) {
   return (
     <a href="#">
-      <img className="hover:scale-110 transition" src={src} alt={alt} />
+      <img className="transition hover:scale-110" src={src} alt={alt} />
     </a>
   );
 }

@@ -8,7 +8,7 @@ export function CategoryGrid() {
   return (
     <section
       className={clsx(
-        "flex flex-col justify-center items-center mt-80 px-4",
+        "mt-80 flex flex-col items-center justify-center px-4",
         "sm:mt-42",
         "md:mt-32",
         "lg:mt-16",
@@ -16,8 +16,8 @@ export function CategoryGrid() {
       )}
     >
       <div className="text-center">
-        <h1 className="font-bold text-2xl sm:text-[32px]">Browse The Range</h1>
-        <span className="text-secondary text-lg sm:text-xl">
+        <h1 className="text-2xl font-bold sm:text-[32px]">Browse The Range</h1>
+        <span className="text-lg text-secondary sm:text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </span>
       </div>

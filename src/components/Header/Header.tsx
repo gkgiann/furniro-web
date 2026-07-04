@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useState } from "react";
 import burgerMenu from "../../assets/burger-menu.svg";
 import cart from "../../assets/cart.svg";
@@ -13,11 +14,17 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky z-50 top-0 flex justify-between items-center py-5 px-8 bg-white text-black">
+    <header className="sticky top-0 z-50 flex items-center justify-between bg-white px-8 py-5 text-black">
       <a href="/">
         <img className="h-8 sm:h-10 md:h-12" src={logo} alt="Logo" />
       </a>
-      <div className="hidden gap-6 font-medium sm:flex md:gap-12 lg:gap-20 ">
+      <div
+        className={clsx(
+          "hidden gap-6 font-medium",
+          "sm:flex",
+          "md:gap-12 lg:gap-20",
+        )}
+      >
         {links.map((label) => (
           <HeaderLink key={label} label={label} />
         ))}
@@ -32,23 +39,29 @@ export function Header() {
         onClick={() => setIsMenuOpen((state) => !state)}
       >
         <img
-          className="w-8 hover:scale-110 transition"
+          className="w-8 transition hover:scale-110"
           src={burgerMenu}
           alt="Menu"
         />
       </button>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 flex items-start justify-center bg-black/35 px-4 pt-24 backdrop-blur-[2px] sm:hidden">
+        <div
+          className={clsx(
+            "fixed inset-0 flex items-start justify-center px-4 pt-24",
+            "bg-black/35 backdrop-blur-[2px]",
+            "sm:hidden",
+          )}
+        >
           <div className="relative w-full max-w-xs rounded-2xl bg-white p-6 text-center shadow-lg">
             <button
-              className="absolute right-4 top-4 cursor-pointer hover:scale-110 transition"
+              className="absolute top-4 right-4 cursor-pointer transition hover:scale-110"
               onClick={() => setIsMenuOpen(false)}
             >
               <img className="w-6" src={closeMenu} alt="Fechar" />
             </button>
 
-            <nav className="flex flex-col mx-auto w-fit gap-4 pt-4 font-medium text-lg">
+            <nav className="mx-auto flex w-fit flex-col gap-4 pt-4 text-lg font-medium">
               {links.map((label) => (
                 <HeaderLink key={label} label={label} />
               ))}
