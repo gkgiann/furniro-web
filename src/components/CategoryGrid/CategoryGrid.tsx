@@ -8,7 +8,7 @@ export function CategoryGrid() {
   return (
     <section
       className={clsx(
-        "flex flex-col justify-center items-center mt-80",
+        "flex flex-col justify-center items-center mt-80 px-4",
         "sm:mt-42",
         "md:mt-32",
         "lg:mt-16",

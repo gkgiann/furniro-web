@@ -8,7 +8,7 @@ export function Discover() {
       <div
         className={clsx(
           "absolute inset-x-0",
-          "max-w-xs mx-auto -mt-14 p-6 pt-7",
+          "max-w-2xs mx-auto -mt-14 p-6 pt-7",
           "flex flex-col",
           "bg-yellow-primary-light rounded-[10px]",
           "sm:max-w-lg sm:-mt-30",
