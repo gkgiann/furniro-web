@@ -8,18 +8,18 @@ export function Discover() {
       <div
         className={clsx(
           "absolute inset-x-0",
-          "max-w-2xs mx-auto -mt-14 p-6 pt-7",
+          "mx-auto -mt-14 max-w-2xs p-6 pt-7",
           "flex flex-col",
-          "bg-yellow-primary-light rounded-[10px]",
-          "sm:max-w-lg sm:-mt-30",
-          "md:max-w-160.75 md:-mt-40",
-          "lg:bottom-12 lg:right-10 lg:left-auto lg:mt-0 lg:mx-0 lg:p-7 lg:pt-10",
-          "xl:bottom-29.25 xl:right-15.75 xl:p-9.25 xl:pt-14",
+          "rounded-[10px] bg-yellow-primary-light",
+          "sm:-mt-30 sm:max-w-lg",
+          "md:-mt-40 md:max-w-160.75",
+          "lg:right-10 lg:bottom-12 lg:left-auto lg:mx-0 lg:mt-0 lg:p-7 lg:pt-10",
+          "xl:right-15.75 xl:bottom-29.25 xl:p-9.25 xl:pt-14",
         )}
       >
         <span
           className={clsx(
-            "text-primary font-semibold tracking-[3px] text-sm mb-1",
+            "mb-1 text-sm font-semibold tracking-[3px] text-primary",
             "xl:text-base",
           )}
         >
@@ -27,16 +27,16 @@ export function Discover() {
         </span>
         <h1
           className={clsx(
-            "text-yellow-primary font-bold text-2xl mb-2",
-            "xl:text-[52px] leading-8 xl:leading-16.25 xl:mb-4.25",
+            "mb-2 text-2xl font-bold text-yellow-primary",
+            "leading-8 xl:mb-4.25 xl:text-[52px] xl:leading-16.25",
           )}
         >
           Discover Our <br /> New Collection
         </h1>
         <span
           className={clsx(
-            "text-primary font-medium leading-6 mb-6",
-            "xl:text-lg xl:mb-11.5",
+            "mb-6 leading-6 font-medium text-primary",
+            "xl:mb-11.5 xl:text-lg",
           )}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -45,11 +45,11 @@ export function Discover() {
 
         <button
           className={clsx(
-            "w-fit mx-auto px-16 py-4",
-            "bg-yellow-primary text-sm text-white font-bold",
+            "mx-auto w-fit px-16 py-4",
+            "bg-yellow-primary text-sm font-bold text-white",
             "cursor-pointer transition",
             "lg:mx-0",
-            "xl:text-base xl:px-18 xl:py-6.25",
+            "xl:px-18 xl:py-6.25 xl:text-base",
             "hover:scale-105",
           )}
         >

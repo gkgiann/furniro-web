@@ -5,7 +5,7 @@ type HeaderLinkProps = {
 
 export function HeaderLink({ href = "#", label }: HeaderLinkProps) {
   return (
-    <a className="hover:scale-110 transition" href={href}>
+    <a className="transition hover:scale-110" href={href}>
       {label}
     </a>
   );
