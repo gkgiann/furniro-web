@@ -4,10 +4,16 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
 
-  --color-yellow-primary-light: #FFF3E3;
-  --color-yellow-primary: #B88E2F;
+  --color-yellow-primary-light: #fff3e3;
+  --color-yellow-primary: #b88e2f;
   --color-primary: #333333;
   --color-secondary: #666666;
+  --color-card: #f4f5f7;
+  --color-gray-1: #3a3a3a;
+  --color-gray-3: #898989;
+  --color-gray-4: #b0b0b0;
+  --color-red-discount: #e97171;
+  --color-green-new: #2ec1ac;
 }
 
 body {
