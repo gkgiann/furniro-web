@@ -23,7 +23,7 @@ export function Discover() {
             "xl:text-base",
           )}
         >
-          New
+          New Arrival
         </span>
         <h1
           className={clsx(
