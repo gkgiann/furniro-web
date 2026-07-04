@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useState } from "react";
 import burgerMenu from "../../assets/burger-menu.svg";
 import cart from "../../assets/cart.svg";
@@ -17,7 +18,13 @@ export function Header() {
       <a href="/">
         <img className="h-8 sm:h-10 md:h-12" src={logo} alt="Logo" />
       </a>
-      <div className="hidden gap-6 font-medium sm:flex md:gap-12 lg:gap-20">
+      <div
+        className={clsx(
+          "hidden gap-6 font-medium",
+          "sm:flex",
+          "md:gap-12 lg:gap-20",
+        )}
+      >
         {links.map((label) => (
           <HeaderLink key={label} label={label} />
         ))}
@@ -39,7 +46,13 @@ export function Header() {
       </button>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 flex items-start justify-center bg-black/35 px-4 pt-24 backdrop-blur-[2px] sm:hidden">
+        <div
+          className={clsx(
+            "fixed inset-0 flex items-start justify-center px-4 pt-24",
+            "bg-black/35 backdrop-blur-[2px]",
+            "sm:hidden",
+          )}
+        >
           <div className="relative w-full max-w-xs rounded-2xl bg-white p-6 text-center shadow-lg">
             <button
               className="absolute top-4 right-4 cursor-pointer transition hover:scale-110"

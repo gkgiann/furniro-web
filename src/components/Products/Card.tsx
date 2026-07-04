@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { toast } from "react-toastify";
 import type { Product } from "../../types/product";
 import { IconLabel } from "./IconLabel";
@@ -34,7 +35,12 @@ export function Card({ product }: CardProps) {
       <div className="absolute inset-0 z-20 bg-black opacity-0 transition-opacity duration-400 group-hover:opacity-72" />
 
       <button
-        className="absolute top-43.75 left-1/2 z-30 w-50.5 -translate-x-1/2 translate-y-32 cursor-pointer bg-white px-13 py-3 font-semibold text-yellow-primary opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 hover:opacity-90"
+        className={clsx(
+          "absolute top-43.75 left-1/2 z-30 w-50.5 -translate-x-1/2",
+          "translate-y-32 cursor-pointer bg-white px-13 py-3 font-semibold text-yellow-primary",
+          "opacity-0 transition-all duration-300 ease-out",
+          "group-hover:translate-y-0 group-hover:opacity-100 hover:opacity-90",
+        )}
         onClick={() => toast.success("Produto adicionado ao carrinho!")}
       >
         Add to Cart
