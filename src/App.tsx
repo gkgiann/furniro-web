@@ -1,6 +1,8 @@
+import { ToastContainer } from "react-toastify";
 import { CategoryGrid } from "./components/CategoryGrid";
 import { Discover } from "./components/Discover";
 import { Header } from "./components/Header";
+import { Products } from "./components/Products";
 
 function App() {
   return (
@@ -8,8 +10,8 @@ function App() {
       <Header />
       <Discover />
       <CategoryGrid />
-      <section className="h-screen"></section>
-      <section className="h-screen"></section>
+      <Products />
+      <ToastContainer theme="colored" />
     </div>
   );
 }
