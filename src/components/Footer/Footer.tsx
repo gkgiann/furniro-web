@@ -2,6 +2,7 @@ import facebookIcon from "../../assets/facebook.svg";
 import instagramIcon from "../../assets/instagram.svg";
 import linkedinIcon from "../../assets/linkedin.svg";
 import twitterIcon from "../../assets/twitter.svg";
+import { IconLink } from "./IconLink";
 import { Links } from "./Links";
 import { Newsletter } from "./Newsletter";
 
@@ -19,41 +20,26 @@ export function Footer() {
             </p>
 
             <div className="mt-13.75 flex gap-4 sm:gap-6 md:gap-7 lg:gap-9 xl:gap-11.5">
-              <a
-                href="https://www.linkedin.com/company/airevolutioncompany/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_0_12px_rgba(0,0,0,0.2)]"
-              >
-                <img src={facebookIcon} alt="Facebook" className="h-4 w-4" />
-              </a>
-
-              <a
+              <IconLink
+                href="https://www.facebook.com/airevolutioncompany/"
+                iconSrc={facebookIcon}
+                alt="Facebook"
+              />
+              <IconLink
                 href="https://www.instagram.com/aircompany.ai/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_0_12px_rgba(0,0,0,0.2)]"
-              >
-                <img src={instagramIcon} alt="Instagram" className="h-4 w-4" />
-              </a>
-
-              <a
-                href="https://www.instagram.com/aircompany.ai/s"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_0_12px_rgba(0,0,0,0.2)]"
-              >
-                <img src={twitterIcon} alt="Twitter" className="h-4 w-4" />
-              </a>
-
-              <a
+                alt="Instagram"
+                iconSrc={instagramIcon}
+              />
+              <IconLink
+                href="https://www.instagram.com/aircompany.ai/"
+                alt="Twitter"
+                iconSrc={twitterIcon}
+              />
+              <IconLink
                 href="https://www.linkedin.com/company/airevolutioncompany/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_0_12px_rgba(0,0,0,0.2)]"
-              >
-                <img src={linkedinIcon} alt="LinkedIn" className="h-4 w-4" />
-              </a>
+                iconSrc={linkedinIcon}
+                alt="LinkedIn"
+              />
             </div>
           </div>
 
