@@ -7,14 +7,14 @@ import { RoomsInspiration } from "./components/RoomsInspiration";
 
 function App() {
   return (
-    <div className="mx-auto max-w-360">
+    <>
       <Header />
       <Discover />
       <CategoryGrid />
       <Products />
       <ToastContainer theme="colored" />
       <RoomsInspiration />
-    </div>
+    </>
   );
 }
 

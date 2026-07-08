@@ -1,15 +1,19 @@
 import clsx from "clsx";
-import interior1 from "../../assets/interior01.svg";
+import homeImg from "../../assets/home.jpg";
 
 export function Discover() {
   return (
-    <section className="relative">
-      <img src={interior1} alt="Imagem de interior de sala" />
+    <section className="relative mx-auto">
+      <img
+        className="max-h-60 w-screen object-cover sm:max-h-70 md:max-h-100 lg:max-h-150 xl:max-h-179"
+        src={homeImg}
+        alt="Imagem de interior de sala"
+      />
       <div
         className={clsx(
           "absolute inset-x-0 mx-auto -mt-14 flex max-w-2xs flex-col rounded-[10px] bg-yellow-primary-light p-6 pt-7",
-          "sm:-mt-30 sm:max-w-lg",
-          "md:-mt-40 md:max-w-160.75",
+          "sm:-mt-40 sm:max-w-lg",
+          "md:-mt-50 md:max-w-160.75",
           "lg:right-10 lg:bottom-12 lg:left-auto lg:mx-0 lg:mt-0 lg:p-7 lg:pt-10",
           "xl:right-15.75 xl:bottom-29.25 xl:p-9.25 xl:pt-14",
         )}
