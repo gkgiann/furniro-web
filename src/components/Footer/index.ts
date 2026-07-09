@@ -1,1 +1,1 @@
-export { Discover } from "./Footer";
+export { Footer } from "./Footer";

@@ -1,7 +1,7 @@
 import { ToastContainer } from "react-toastify";
 import { CategoryGrid } from "./components/CategoryGrid";
 import { Discover } from "./components/Discover";
-import { Footer } from "./components/Footer/Footer";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Mosaic } from "./components/Mosaic";
 import { Products } from "./components/Products";
