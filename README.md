@@ -130,12 +130,6 @@ Depois, caso queira testar o resultado final localmente:
 npm run preview
 ```
 
-## Observações
-
-- O projeto é uma landing page frontend, não uma aplicação com rotas complexas.
-- Algumas ações da interface são apenas demonstrativas e exibem feedback visual via toast.
-- O conteúdo e as imagens foram organizados para reforçar a identidade visual da vitrine Furniro.
-
 ## Licença
 
 Projeto desenvolvido para fins de estudo e desafio técnico.
