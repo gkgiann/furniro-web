@@ -3,6 +3,7 @@ import { CategoryGrid } from "./components/CategoryGrid";
 import { Discover } from "./components/Discover";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header";
+import { Mosaic } from "./components/Mosaic";
 import { Products } from "./components/Products";
 import { RoomsInspiration } from "./components/RoomsInspiration";
 
@@ -15,6 +16,7 @@ function App() {
       <Products />
       <ToastContainer theme="colored" />
       <RoomsInspiration />
+      <Mosaic />
       <Footer />
     </>
   );
