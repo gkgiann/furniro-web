@@ -1,75 +1,135 @@
-# React + TypeScript + Vite
+# Furniro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto frontend desenvolvido com React, TypeScript e Vite para apresentar uma landing page de e-commerce de móveis. A interface foi construída com foco visual, layout responsivo e componentes reutilizáveis, simulando uma vitrine de produtos com seções institucionais e de destaque.
 
-Currently, two official plugins are available:
+## Visão Geral
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O app renderiza uma página única com as seguintes áreas:
 
-## React Compiler
+- Header fixo com navegação e versão mobile com menu responsivo.
+- Hero banner com chamada principal para a coleção.
+- Grade de categorias com ambientes como Dining, Living e Bedroom.
+- Seção de produtos consumidos a partir de uma API local simulada.
+- Carousel de inspiração de ambientes.
+- Mosaic final para compartilhar montagens com a hashtag da marca.
+- Footer com links, redes sociais e newsletter.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- clsx
+- Embla Carousel
+- React Toastify
+- Zod
+- json-server para mock local de dados
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Funcionalidades
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Layout responsivo para desktop e mobile.
+- Menu mobile expansível no header.
+- Listagem de categorias com cards visuais.
+- Consumo de produtos por `fetch` em `http://localhost:3000/products`.
+- Exibição de cards de produto com ação de destaque.
+- Carousel horizontal para inspirar combinações de ambientes.
+- Galeria final com mosaico de imagens.
+- Newsletter com validação e feedback visual.
+- Toasts para interações do usuário.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Pré-requisitos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Antes de rodar o projeto, tenha instalado:
 
+- Node.js 18+.
+- npm.
+
+## Instalação
+
+1. Clone o repositório.
+
+```bash
+git clone https://github.com/gkgiann/furniro-web.git
+cd furniro-web
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instale as dependências.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
+
+## Como Rodar
+
+O projeto depende de uma API local simulada para listar os produtos. Por isso, você precisa subir o mock antes de abrir a aplicação.
+
+1. Inicie o json-server apontando para o arquivo `products.json` na raiz do projeto.
+
+```bash
+npx json-server products.json --port 3000
+```
+
+2. Em outra aba do terminal, rode o app em modo de desenvolvimento.
+
+```bash
+npm run dev
+```
+
+3. Acesse o projeto no navegador.
+
+```bash
+http://localhost:5173
+```
+
+## Scripts Disponíveis
+
+```bash
+npm run dev      # Inicia o ambiente de desenvolvimento com Vite
+npm run build    # Gera a build de produção
+npm run lint     # Executa o ESLint
+npm run preview  # Visualiza a build gerada localmente
+```
+
+## Estrutura do Projeto
+
+```text
+src/
+  components/
+    Header/
+    Discover/
+    CategoryGrid/
+    Products/
+    RoomsInspiration/
+    Mosaic/
+    Footer/
+  types/
+```
+
+## Dados dos Produtos
+
+Os produtos exibidos na seção principal vêm do arquivo `products.json`. O app espera a rota:
+
+```bash
+http://localhost:3000/products
+```
+
+Se o mock local não estiver ativo, a listagem de produtos não será carregada.
+
+## Build de Produção
+
+Para gerar a versão otimizada da aplicação:
+
+```bash
+npm run build
+```
+
+Depois, caso queira testar o resultado final localmente:
+
+```bash
+npm run preview
+```
+
+## Licença
+
+Projeto desenvolvido para fins de estudo e desafio técnico.

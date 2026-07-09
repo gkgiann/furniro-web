@@ -1,5 +1,25 @@
+import { ToastContainer } from "react-toastify";
+import { CategoryGrid } from "./components/CategoryGrid";
+import { Discover } from "./components/Discover";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Mosaic } from "./components/Mosaic";
+import { Products } from "./components/Products";
+import { RoomsInspiration } from "./components/RoomsInspiration";
+
 function App() {
-  return <h1>Desafio Furniro</h1>;
+  return (
+    <>
+      <Header />
+      <Discover />
+      <CategoryGrid />
+      <Products />
+      <ToastContainer theme="colored" />
+      <RoomsInspiration />
+      <Mosaic />
+      <Footer />
+    </>
+  );
 }
 
 export default App;

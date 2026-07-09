@@ -1,0 +1,1 @@
+export { RoomsInspiration } from "./RoomsInspiration";
