@@ -13,12 +13,24 @@
   --color-gray-2: #616161;
   --color-gray-3: #898989;
   --color-gray-4: #b0b0b0;
-  --color-gray-5: #D8D8D8;
+  --color-gray-5: #d8d8d8;
   --color-footer-gray: #9f9f9f;
   --color-footer: #d9d9d9;
   --color-red-discount: #e97171;
   --color-green-new: #2ec1ac;
-  --color-inspiration: #FCF8F3;
+  --color-inspiration: #fcf8f3;
+
+  --animate-mosaic: mosaic 20s linear infinite;
+
+  @keyframes mosaic {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 body {
